@@ -41,7 +41,6 @@ void drugie()
         }
     }
     
-    
     for (int z=0; z<5; z++)
     {
         cout << tab[z] <<endl;
@@ -49,12 +48,20 @@ void drugie()
     
 }
 
+void zamiana(int &x, int &y)
+{
+    int temp=0;
+    
+    temp=x;
+    x=y;
+    y=temp;
+}
+
 
 int main() {
     
     pierwsze();
     drugie();
-    
-    
+    zamiana(1,2);
     return 0;
 }
