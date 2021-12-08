@@ -58,10 +58,40 @@ void zamiana(int &x, int &y)
 }
 
 
+void sortowanie_tablicy(int tab[], int n)
+{
+    for (int i=0; i<n; i++)
+    {
+        for (int j=0; j<n; j++)
+        {
+            if (tab[i]<tab[j])
+                zamiana(tab[i], tab[j]);
+        }
+    }
+    
+    wypisywanie_tablicy(tab, n);
+}
+
+void wypisywanie_tablicy(int tab[], int n)
+{
+    for (int z=0; z<n; z++)
+    {
+        cout << tab[z] <<endl;
+    }
+}
+
+
+
 int main() {
+    int a=10,b=20;
+    int tab[5]={9,3,8,2,6};
     
     pierwsze();
+    cout << endl;
     drugie();
-    zamiana(1,2);
+    cout << endl;
+    zamiana(a,b);
+    cout << endl;
+    sortowanie_tablicy(tab, 5);
     return 0;
 }
